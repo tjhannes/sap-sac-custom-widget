@@ -46,54 +46,7 @@
 		    <div class="col-md-4 col-sm-4">
 		      <div class="metric participation" data-ratio=".95">
 		        <svg viewBox="0 0 1000 500">   
-		        	<path
-				       sodipodi:nodetypes="ccccc"
-				       d="m 3.5907731,3.9876487 h 6.331101 l -3.165551,2.7403272 v 0 z"
-				       style="fill:#000000;stroke-width:0.18733"
-				       id="rect15" />     
-			        <rect
-				       y="9.0029182"
-				       x="3.8333664"
-				       height="3.3150086"
-				       width="17.764341"
-				       id="rect10"
-				       style="fill:#ff0000;fill-rule:evenodd;stroke-width:0.0697685" />
-				    <rect
-				       y="9.0029182"
-				       x="21.597712"
-				       height="3.3150086"
-				       width="19.348097"
-				       id="rect12"
-				       style="fill:#ffff00;stroke-width:0.0652905" />
-				    <rect
-				       y="9.0029163"
-				       x="40.945805"
-				       height="3.3150094"
-				       width="15.813202"
-				       id="rect14"
-				       style="fill:#00ff00;stroke-width:0.0740249" />
-					<text
-				       id="text20"
-				       y="14.268601"
-				       x="3.6852679"
-				       style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-				       xml:space="preserve"><tspan
-				         style="font-size:3.52778px;stroke-width:0.264583"
-				         y="14.268601"
-				         x="3.6852679"
-				         id="tspan18"
-				         sodipodi:role="line">0%</tspan></text>
-				    <text
-				       xml:space="preserve"
-				       style="font-style:normal;font-weight:normal;font-size:3.52777px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-				       x="46.409382"
-				       y="14.510739"
-				       id="text20-4"><tspan
-				         sodipodi:role="line"
-				         id="tspan18-7"
-				         x="46.409382"
-				         y="14.510739"
-				         style="font-size:3.52777px;stroke-width:0.264583">100%</tspan></text>
+		        	<path d="M 950 500 A 450 450 0 0 0 50 500"></path>
   	            </svg>
 		      </div>
 		    </div>
