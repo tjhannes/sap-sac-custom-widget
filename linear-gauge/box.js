@@ -14,31 +14,6 @@
 		  background: #fff;
 		}
 		
-		.metric {
-		  padding: 10%;
-		}
-		
-		.metric svg {
-		  max-width: 100%;
-		}
-		
-		.metric path {
-		  stroke-width: 75;
-		  stroke: #ecf0f1;
-		  fill: none;
-		}
-		
-		.metric text {
-		  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		}
-		
-		.metric.participation path.data-arc {
-		  stroke: #27ae60;
-		}
-		
-		.metric.participation text {
-		  fill: #27ae60;
-		}		
 		</style>
 		
 		<div class="container">
@@ -60,7 +35,6 @@
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			
-			this.$style = shadowRoot.querySelector('style');			
 			this.$svg = shadowRoot.querySelector('svg');
 			
 			this.addEventListener("click", event => {
@@ -78,7 +52,6 @@
 
 			
 			if(rounded >=0 && rounded <=100) {
-				this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + color + ';}.metric.participation text {fill: ' + color + ';}';
 				this.$svg.innerHTML = '<path d="M 950 500 A 450 450 0 0 0 50 500"></path>';
 			}
 		}
