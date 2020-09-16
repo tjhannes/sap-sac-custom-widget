@@ -14,14 +14,41 @@
 		  background: #fff;
 		}
 		
+		.metric {
+		  padding: 10%;
+		}
+		
+		.metric svg {
+		  max-width: 100%;
+		}
+		
+		.metric path {
+		  stroke-width: 75;
+		  stroke: #ecf0f1;
+		  fill: none;
+		}
+		
+		.metric text {
+		  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		
+		.metric.participation path.data-arc {
+		  stroke: #27ae60;
+		}
+		
+		.metric.participation text {
+		  fill: #27ae60;
+		}		
 		</style>
 		
 		<div class="container">
 		  <div class="row">
 		    <div class="col-md-4 col-sm-4">
 		      <div class="metric participation" data-ratio=".95">
-		        <svg viewBox="0 0 1000 500">   
-		        	<path d="M 950 500 A 450 450 0 0 0 50 500"></path>
+		        <svg viewBox="0 0 1000 500">
+			        <path d="M 950 500 A 450 450 0 0 0 50 500"></path>
+					<text class='percentage' text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">0%</text>
+					<text class='title' text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal"></text>
   	            </svg>
 		      </div>
 		    </div>
@@ -31,11 +58,11 @@
 
 	class Box extends HTMLElement {
 		constructor() {
-			console.log("Test 1");
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			
+			this.$style = shadowRoot.querySelector('style');			
 			this.$svg = shadowRoot.querySelector('svg');
 			
 			this.addEventListener("click", event => {
@@ -51,11 +78,10 @@
 			var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
 			var rounded = Math.round( val * 10 ) / 10;
 
-			console.log(this.$svg.innerHTML);
-
 			
 			if(rounded >=0 && rounded <=100) {
-				this.$svg.innerHTML = '<path d="M 950 500 A 450 450 0 0 0 50 500"></path>';
+				this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + color + ';}.metric.participation text {fill: ' + color + ';}';
+				this.$svg.innerHTML = '<path d="M 950 500 A 450 450 0 0 0 50 500"></path><text class="percentage" text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">' + rounded + '%</text><text class="title" text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal">' + info + '</text><path d="' + x + '" class="data-arc"></path>"';
 			}
 		}
 		  
