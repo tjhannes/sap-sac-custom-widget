@@ -31,6 +31,7 @@
 
 	class Box extends HTMLElement {
 		constructor() {
+			console.log("Test 1");
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
@@ -49,6 +50,8 @@
 			var val1 = val * 0.01;
 			var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
 			var rounded = Math.round( val * 10 ) / 10;
+
+			console.log(this.$svg.innerHTML);
 
 			
 			if(rounded >=0 && rounded <=100) {
