@@ -165,5 +165,5 @@
 		}
 	}
 	
-	customElements.define("com-demo-gauge", Box);
+	customElements.define("com-linear-gauge", Box);
 })();
